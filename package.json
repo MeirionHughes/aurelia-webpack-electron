@@ -11,7 +11,7 @@
     "debug": "npm run build:main && concurrently \"webpack-dev-server --content-base build --watch\" \"electron . --enable-logging --remote-debugging-port=9222\" "
   },
   "author": "Meirion Hughes <crakinshot@yahoo.com>",
-  "license": "UNLICENSED",
+  "license": "MIT",
   "devDependencies": {
     "@types/node": "^7.0.12",
     "aurelia-animator-css": "^1.0.1",
