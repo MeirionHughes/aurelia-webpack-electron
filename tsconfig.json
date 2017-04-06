@@ -1,0 +1,19 @@
+{
+  "compilerOptions": {
+    "target": "es2016",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "dom",
+      "es2015"
+    ],
+    "noEmitOnError": true,
+    "newLine": "LF",
+    "strictNullChecks": true,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true
+  },
+  "exclude": [
+    "node_modules"
+  ]
+}
