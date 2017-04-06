@@ -1,8 +1,9 @@
-const electron = require('electron');
-const BrowserWindow = electron.BrowserWindow;
-const path = require('path');
+/**
+ * main-thread entry
+ */
 
-const app = electron.app;
+import { BrowserWindow, app } from 'electron';
+import path = require("path");
 
 app.on('window-all-closed', function () {
   if (process.platform != 'darwin')
@@ -13,10 +14,10 @@ app.on('ready', function () {
   var main_width = 800;
   var main_height = 600;
 
-  var mainWindow = new BrowserWindow({ 
-    width: main_width, 
+  var mainWindow = new BrowserWindow({
+    width: main_width,
     height: main_height,
-    frame:true
+    frame: true
   });
 
   mainWindow.loadURL('http://localhost:8080');

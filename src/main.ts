@@ -1,3 +1,7 @@
+/**
+ * browser-thread entry
+ */
+
 import { Aurelia } from 'aurelia-framework';
 import { PLATFORM } from 'aurelia-pal';
 

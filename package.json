@@ -6,12 +6,14 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack",
-    "develop": "concurrently \"webpack-dev-server --content-base build --hot\" \"electron .\" ",
-    "debug": "concurrently \"webpack-dev-server --content-base build --watch\" \"electron . --enable-logging --remote-debugging-port=9222\" "
+    "build:main" : "tsc --project tsconfig.main.json --rootDir ./src/ --outDir ./",
+    "develop": "npm run build:main && concurrently \"webpack-dev-server --content-base build --hot\" \"electron .\" ",
+    "debug": "npm run build:main && concurrently \"webpack-dev-server --content-base build --watch\" \"electron . --enable-logging --remote-debugging-port=9222\" "
   },
   "author": "Meirion Hughes <crakinshot@yahoo.com>",
   "license": "UNLICENSED",
   "devDependencies": {
+    "@types/node": "^7.0.12",
     "aurelia-animator-css": "^1.0.1",
     "aurelia-animator-velocity": "^1.1.0",
     "aurelia-bootstrapper": "^2.0.1",
