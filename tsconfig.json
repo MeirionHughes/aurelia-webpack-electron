@@ -11,10 +11,7 @@
     "newLine": "LF",
     "strictNullChecks": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true,
-    "typeRoots": [
-      "node_mo"
-    ]    
+    "emitDecoratorMetadata": true
   },
   "exclude": [
     "node_modules"

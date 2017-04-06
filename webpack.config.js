@@ -11,6 +11,7 @@ const autoprefixer = require("autoprefixer");
 
 let config = {
   entry: { "main": "aurelia-bootstrapper" },
+  target:"electron-renderer",
   output: {
     path: buildPath,
     filename: "[name].js",
@@ -44,6 +45,7 @@ let config = {
   },
   plugins: [
     new AureliaPlugin({
+      pal: "aurelia-pal-browser",
       dist: 'es2015',
       features: { ie: false, svg: false, unparser: false },
 
