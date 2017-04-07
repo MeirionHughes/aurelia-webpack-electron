@@ -1,4 +1,16 @@
+@import "./style/variables.scss";
+@import "../node_modules/font-awesome/scss/font-awesome.scss";
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 body {
+  padding: 0;
+  margin: 0;
+  border: 1px solid $black;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   display: flex;
-  background-color: ghostwhite;
+  flex-flow: column;
 }

@@ -10,7 +10,7 @@ debugging (vscode):
 ```
 npm run debug
 ```
-then press f5
+then press f5. once you are done you'll need to terminate the webpack-watch using `ctrl+C` in the terminal
 
 # example
 

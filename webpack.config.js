@@ -72,9 +72,12 @@ let config = {
       title: 'Custom template',
       template: 'src/main.ejs',
       filename: "index.html"
-    }),
-    new WriteFilePlugin(),
+    })
   ]
 };
+
+if (process.env.NODE_ENV === "debug") {
+  config.plugins.push(new WriteFilePlugin());
+}
 
 module.exports = config;

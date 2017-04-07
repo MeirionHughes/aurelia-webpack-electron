@@ -1,0 +1,61 @@
+@import "../style/variables";
+
+window,
+window .content,
+window .content * {
+  display: flex;
+  flex-flow: column;
+  flex: 1;
+}
+
+#title-bar {
+  -webkit-app-region: drag;
+  background-color: $brand-inverse;
+  height: 32px;
+  padding: 0;
+  margin: 0;
+}
+
+#title {
+  position: fixed;
+  color: $white;  
+  top: 0;
+  left: 12px;
+  line-height: 32px;
+  font-size: 14px;
+}
+
+#title-bar-btns {
+  -webkit-app-region: no-drag;
+  position: fixed;
+  top: 1px;
+  right: 0;
+}
+
+#title-bar-btns button {
+  height: 32px;
+  width: 32px;
+  background-color: transparent;
+  border: none;
+  color: #F1F1F1;
+  font-size: 16px;
+}
+
+#title-bar-btns button:hover {
+  background-color: $gray
+}
+
+#content {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+
+@media print {
+  body {
+    border: none;
+  }
+  #title-bar {
+    display: none;
+  }
+}

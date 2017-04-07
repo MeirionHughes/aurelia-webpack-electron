@@ -9,7 +9,7 @@ export async function configure(aurelia: Aurelia): Promise<void> {
   aurelia.use.standardConfiguration();
 
   aurelia.use.globalResources([
-    PLATFORM.moduleName("components/core/panel")
+    PLATFORM.moduleName("elements/window")
   ]);
 
   await aurelia.start();

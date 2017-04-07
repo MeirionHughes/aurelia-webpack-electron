@@ -11,7 +11,11 @@
     "newLine": "LF",
     "strictNullChecks": true,
     "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
+    "emitDecoratorMetadata": true,
+    "types": [
+      "node",
+      "electron"
+    ]
   },
   "exclude": [
     "node_modules"
