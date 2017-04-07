@@ -8,15 +8,16 @@ const WriteFilePlugin = require('write-file-webpack-plugin');
 const AureliaPlugin = require("aurelia-webpack-plugin").AureliaPlugin;
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 const autoprefixer = require("autoprefixer");
+const BabiliPlugin = require("babili-webpack-plugin");
 
 let config = {
   entry: { "main": "aurelia-bootstrapper" },
   target:"electron-renderer",
   output: {
     path: buildPath,
-    filename: "[name].js",
+    filename: "[hash].js",
   },
-  devtool: "inline-source-maps"  ,
+  devtool: "inline-source-maps", 
   devServer: {
     contentBase: 'build'
   },
@@ -78,6 +79,12 @@ let config = {
 
 if (process.env.NODE_ENV === "debug") {
   config.plugins.push(new WriteFilePlugin());
+}
+
+if (process.env.NODE_ENV === "production") {
+  config.plugins.push(new BabiliPlugin());
+  delete config.devtool;
+  delete config.devServer;
 }
 
 module.exports = config;
