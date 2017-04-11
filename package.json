@@ -9,8 +9,8 @@
     "build:render": "cross-env NODE_ENV=production webpack",
     "build:main": "tsc --project tsconfig.main.json --rootDir ./src/ --outDir ./",
     "build": "concurrently \"npm run build:render\" \"npm run build:main\"",
-    "debug": "concurrently \"cross-env NODE_ENV=debug webpack-dev-server --content-base build --watch\" \"electron . --enable-logging --remote-debugging-port=9222",
-    "develop": "concurrently \"cross-env NODE_ENV=develop webpack-dev-server --content-base build --watch\" \"electron .\""
+    "debug": "concurrently \"cross-env NODE_ENV=debug webpack-dev-server --content-base build --watch\" \"wait-on http://localhost:8080 && electron . --enable-logging --remote-debugging-port=9222",
+    "develop": "concurrently \"cross-env NODE_ENV=develop webpack-dev-server --content-base build --watch\" \"wait-on http://localhost:8080 && electron .\""
   },
   "author": "Meirion Hughes <crakinshot@yahoo.com>",
   "license": "MIT",
@@ -42,6 +42,7 @@
     "ts-loader": "^2.0.3",
     "typescript": "^2.2.2",
     "url-loader": "^0.5.8",
+    "wait-on": "^2.0.2",
     "webpack": "^2.3.3",
     "webpack-dev-server": "^2.4.2",
     "whatwg-fetch": "^2.0.3",
