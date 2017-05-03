@@ -10,7 +10,7 @@
     "build:main": "tsc --project tsconfig.main.json --rootDir ./src/ --outDir ./",
     "build": "concurrently \"npm run build:render\" \"npm run build:main\"",
     "debug": "concurrently \"cross-env NODE_ENV=debug webpack-dev-server --content-base build --watch\" \"wait-on http://localhost:8080 && electron . --enable-logging --remote-debugging-port=9222",
-    "develop": "concurrently \"cross-env NODE_ENV=develop webpack-dev-server --content-base build --watch\" \"wait-on http://localhost:8080 && electron .\""
+    "develop": "concurrently \"cross-env NODE_ENV=develop webpack-dev-server --content-base build --hot\" \"wait-on http://localhost:8080 && electron .\""
   },
   "author": "Meirion Hughes <crakinshot@yahoo.com>",
   "license": "MIT",
