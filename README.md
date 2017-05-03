@@ -14,4 +14,4 @@ then press f5. once you are done you'll need to terminate the webpack-watch usin
 
 # example
 
-![example_aurelia_electron](https://cloud.githubusercontent.com/assets/3584509/24791596/a76a645e-1b72-11e7-93b1-4bca739c79c0.gif)
+![example_aurelia_electron](https://cloud.githubusercontent.com/assets/3584509/24902766/26d676d2-1ea3-11e7-920d-32b9c02f0623.gif)
