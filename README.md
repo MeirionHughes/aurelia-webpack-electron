@@ -1,4 +1,5 @@
 # aurelia webpack electron
+⚠️ no longer maintained
 
 development (hot module reload)
 
