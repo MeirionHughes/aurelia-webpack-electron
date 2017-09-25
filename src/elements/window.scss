@@ -10,7 +10,7 @@ window .content * {
 
 #title-bar {
   -webkit-app-region: drag;
-  background-color: $brand-inverse;
+  background-color: theme-color("dark");
   height: 32px;
   padding: 0;
   margin: 0;
@@ -42,7 +42,7 @@ window .content * {
 }
 
 #title-bar-btns button:hover {
-  background-color: $gray
+  background-color: theme-color("light");
 }
 
 #content {

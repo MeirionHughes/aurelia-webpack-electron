@@ -1,6 +1,11 @@
-@import "./style/variables.scss";
+/** Font Awesome **/
+$fa-font-path: "../node_modules/font-awesome/fonts" !default;
 @import "../node_modules/font-awesome/scss/font-awesome.scss";
+
+/** override bootstrap variables here */
+
 @import "../node_modules/bootstrap/scss/bootstrap.scss";
+
 
 body {
   padding: 0;
@@ -14,3 +19,5 @@ body {
   display: flex;
   flex-flow: column;
 }
+
+
